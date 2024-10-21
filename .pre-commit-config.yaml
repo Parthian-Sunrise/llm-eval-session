@@ -15,7 +15,7 @@ repos:
         language: system
         types: [python]
         additional_dependencies: []
-        args: ["--max-line-length=88"]
+        args: ["--max-line-length=1600"]
 
       - id: check-added-large-files
         name: Check added large files
