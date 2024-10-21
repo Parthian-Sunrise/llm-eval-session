@@ -1,0 +1,32 @@
+repos:
+  - repo: local
+    hooks:
+      - id: black
+        name: black
+        entry: black
+        language: system
+        types: [python]
+        additional_dependencies: []
+        args: ["--line-length=88"]
+
+      - id: flake8
+        name: flake8
+        entry: flake8
+        language: system
+        types: [python]
+        additional_dependencies: []
+        args: ["--max-line-length=88"]
+
+      - id: check-added-large-files
+        name: Check added large files
+        entry: check-added-large-files
+        language: system
+        additional_dependencies: []
+        args: ["--maxkb=500"]
+
+      - id: nbstripout
+        name: Strip output from Jupyter notebooks
+        entry: nbstripout
+        language: system
+        types: [jupyter]
+        additional_dependencies: []
