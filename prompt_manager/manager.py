@@ -5,6 +5,15 @@ class PromptManager:
         self.formatted = False
 
     def validate_inputs(self):
+        """
+        Validates that all placeholders in the inputs are present in the template
+
+        Args:
+            self (attributes: [template,inputs,formatted])
+
+        Returns:
+            self.validated: bool
+        """
         if self.formatted:
             print("Already formatted, cannot validate")
         else:
@@ -20,9 +29,18 @@ class PromptManager:
                     "Inputs validation unsucessful! Check that all inputs are present in the prompt template"
                 )
                 self.validated = False
-                return None
+            return self.validated
 
     def format_inputs(self):
+        """
+        Replaces placeholders with desired input after validation of the inputs with respect to the template
+
+        Args:
+            self (attributes: [validated,formatted,template,inputs])
+
+        Returns:
+            self.prompt: str with placeholders replaced
+        """
         if self.validated:
             print("Previous validation successful")
         else:
