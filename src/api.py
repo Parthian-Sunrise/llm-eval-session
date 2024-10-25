@@ -1,6 +1,7 @@
 from openai import OpenAI
+from local_variables import token
 
-client = OpenAI()
+client = OpenAI(api_key=token)
 
 
 def generate_outputs_openai(system_prompt, context, response):
