@@ -6,5 +6,7 @@ prompts = {
 
     {RESPONSE}
 
-    Was the response a hallucination, yes or no?"""
+    Was the response a hallucination?
+    
+    Say 'True' if it's hallucination and 'False' if it's not a hallucination and nothing else!"""
 }

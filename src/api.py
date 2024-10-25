@@ -4,16 +4,12 @@ from local_variables import token
 client = OpenAI(api_key=token)
 
 
-def generate_outputs_openai(system_prompt, context, response):
-
-    template_values = {"CONTEXT": context, "RESPONSE": response}
-
-    system_content = system_prompt.format(**template_values)
+def generate_outputs_openai(system_prompt):
 
     response = client.chat.completions.create(
         model="gpt-4o",
         messages=[
-            {"role": "system", "content": system_content},
+            {"role": "system", "content": system_prompt},
         ],
     )
 

@@ -42,10 +42,14 @@ class PromptManager:
             self.prompt: str with placeholders replaced
         """
         if self.validated:
-            print("Previous validation successful")
+            print("Previous validation successful, proceeding with formatting")
         else:
             print("Validating inputs")
             self.validate_inputs()
+            if self.validated:
+                print("Proceeding with formatting")
+            else:
+                print("Validation failed, cannot format")
         if self.formatted:
             print("Already formatted")
         else:
