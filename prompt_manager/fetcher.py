@@ -58,7 +58,7 @@ def fetch_prompt(
     version = fetch_prompt_version(version_dict, sequence)
 
     # Create path to prompt using sequencing
-    path_to_prompt = os.path.join(root_directory, prompt_folder, *sequence)
+    path_to_prompt = os.path.join(root_directory, prompt_folder, sequence[0])
 
     # Assert that the .py file containing the prompt is named appropriately and in the right directory
     assert f"{sequence[-1]}.py" in os.listdir(path_to_prompt)
