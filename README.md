@@ -26,9 +26,12 @@ When opening the repo in the future activate the venv using the above command or
 ```
 cd() { builtin cd "$@" && [ -d venv ] && source venv/bin/activate; }
 ```
-Next install the requirements: 
---developer_requirements.txt: This should include all packages required to edit the repo (packages the end user doesn't require)
---requirements.txt: This should include all packages required to run any notebooks or scripts in the repo itself 
+Next install the requirements:
+- developer_requirements.txt: This should include all packages required to edit the repo (packages the end user doesn't require)
+- requirements.txt: This should include all packages required to run any notebooks or scripts in the repo itself 
+
+To do this run:
+```pip3 install -r requirements.txt```
 
 ## 3: Activate pre-commit hooks
 Check your .pre-commit-config file is present, then run the following
