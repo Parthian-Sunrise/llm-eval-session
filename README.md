@@ -31,7 +31,7 @@ Next install the requirements:
 - requirements.txt: This should include all packages required to run any notebooks or scripts in the repo itself 
 
 To do this run:
-```pip3 install -r requirements.txt```
+```pip install -r requirements.txt```
 
 ## 3: Activate pre-commit hooks
 Check your .pre-commit-config file is present, then run the following

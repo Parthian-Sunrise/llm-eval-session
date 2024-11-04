@@ -4,3 +4,5 @@ black
 flake8
 nbstripout
 pandas
+pydantic
+pydantic_settings

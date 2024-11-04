@@ -1,5 +1,6 @@
 from openai import OpenAI
-from local_variables import token
+
+from config import settings
 
 
 def get_openai_client():
@@ -10,13 +11,14 @@ def get_openai_client():
         client: OpenAI client
     """
 
-    if token == "":
+    if settings.api_key == "":
         raise ValueError(
-            "Invalid OpenAI token. Please make sure you replace the placeholder with the actual token."
+            """Invalid OpenAI token. Please make sure you replace the placeholder
+            with the actual api key in the .env file."""
         )
-    else:
-        client = OpenAI(api_key=token)
-        return client
+
+    client = OpenAI(api_key=settings.api_key)
+    return client
 
 
 def generate_outputs_openai(system_prompt: str = None):
