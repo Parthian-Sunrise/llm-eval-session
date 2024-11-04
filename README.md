@@ -36,4 +36,9 @@ Check your .pre-commit-config file is present, then run the following
 pre-commit install
 ```
 
-
+## 4: OpenAI API Configuration
+To setup the OpenAI API follow these steps:
+1. Make a copy of the `.env.template` file in the project root.
+2. Rename the copy to `.env`
+3. Copy and paste the API key that will be shared with you during the session.
+4. *Optional:* To ensure everything works correctly, you can try to run the example notebook under: `example/example.ipynb`
