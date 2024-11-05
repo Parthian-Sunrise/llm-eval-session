@@ -6,3 +6,5 @@ nbstripout
 pandas
 pydantic
 pydantic_settings
+pyarrow
+fsspec
