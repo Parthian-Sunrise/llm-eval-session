@@ -45,4 +45,6 @@ def preprocess_hallucination(df, volume, seed=42):
         }
     )
 
-    return df_right_answer.sample(n = volume, random_state = seed), df_hallucinate_answer.sample(n = volume, random_state = seed)
+    return df_right_answer.sample(
+        n=volume, random_state=seed
+    ), df_hallucinate_answer.sample(n=volume, random_state=seed)
