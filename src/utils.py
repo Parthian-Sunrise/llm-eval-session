@@ -1,4 +1,5 @@
 import os
+import pandas as pd
 from local_variables import ROOT_DIR
 
 
@@ -12,3 +13,37 @@ def test_root_dir(rel_root):
         print("Root set up correctly")
     else:
         print("Root may be incorrect, check local variables")
+
+
+def preprocess_hallucination(df, seed=42):
+    """
+    Function to prepare hallucination random sample.
+
+    Args:
+        df: original hallucination data
+        seed: seed used for random state
+
+    Returns:
+        randomly sampled correct answer df and hallucinated answer df
+
+    """
+
+    df_right_answer = pd.DataFrame(
+        {
+            "Context": df["knowledge"] + " " + df["question"],
+            "Response": df["right_answer"],
+            "Ground_truth": 1,
+        }
+    )
+
+    df_hallucinate_answer = pd.DataFrame(
+        {
+            "Context": df["knowledge"] + " " + df["question"],
+            "Response": df["hallucinated_answer"],
+            "Ground_truth": 0,
+        }
+    )
+
+    return df_right_answer.sample(random_state=seed), df_hallucinate_answer.sample(
+        random_state=seed
+    )
