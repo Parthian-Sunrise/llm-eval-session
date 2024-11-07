@@ -9,6 +9,6 @@ def get_root_dir():
 def test_root_dir(rel_root):
     cwd = os.getcwd()
     if cwd.replace(str(ROOT_DIR), "").count("/") == rel_root.count("/"):
-        print("Root set up correctly")
+        print("Root directory set up correctly!")
     else:
-        print("Root may be incorrect, check local variables")
+        print("Root directory may be incorrect, check local variables")

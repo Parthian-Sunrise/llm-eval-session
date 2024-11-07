@@ -22,7 +22,6 @@ class PromptManager:
             ]
 
             if sum(assertion_list) == len(assertion_list):
-                print("Inputs validated successfully!")
                 self.validated = True
             else:
                 print(
@@ -42,7 +41,7 @@ class PromptManager:
             self.prompt: str with placeholders replaced
         """
         if self.validated:
-            print("Previous validation successful, proceeding with formatting")
+            pass
         else:
             print("Validating inputs")
             self.validate_inputs()
