@@ -15,12 +15,13 @@ def test_root_dir(rel_root):
         print("Root may be incorrect, check local variables")
 
 
-def preprocess_hallucination(df, seed=42):
+def preprocess_hallucination(df, volume, seed=42):
     """
     Function to prepare hallucination random sample.
 
     Args:
         df: original hallucination data
+        volume: df size
         seed: seed used for random state
 
     Returns:
@@ -44,6 +45,4 @@ def preprocess_hallucination(df, seed=42):
         }
     )
 
-    return df_right_answer.sample(random_state=seed), df_hallucinate_answer.sample(
-        random_state=seed
-    )
+    return df_right_answer.sample(n = volume, random_state = seed), df_hallucinate_answer.sample(n = volume, random_state = seed)
