@@ -1,4 +1,11 @@
+import openai
 from openai import OpenAI
+from tenacity import (
+    retry,
+    retry_if_exception_type,
+    stop_after_attempt,
+    wait_exponential,
+)
 
 from config import settings
 
@@ -21,6 +28,23 @@ def get_openai_client():
     return client
 
 
+def log_attempt_number(retry_state):
+    """
+    Print the retry attempt number.
+
+    Args:
+        retry_state: tenacity retry state
+
+    """
+    print("Retrying: %s", retry_state.attempt_number)
+
+
+@retry(
+    wait=wait_exponential(min=4),
+    retry=retry_if_exception_type(openai.RateLimitError),
+    stop=stop_after_attempt(5),
+    after=log_attempt_number,
+)
 def generate_outputs_openai(system_prompt: str = None):
     """
     Generate OpenAI response with given system prompt.
