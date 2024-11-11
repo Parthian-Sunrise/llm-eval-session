@@ -33,7 +33,7 @@ def preprocess_hallucination(df, volume, seed=42):
         {
             "Context": df["knowledge"] + " " + df["question"],
             "Response": df["right_answer"],
-            "Ground_truth": 1,
+            "Ground_truth": True,
         }
     )
 
@@ -41,7 +41,7 @@ def preprocess_hallucination(df, volume, seed=42):
         {
             "Context": df["knowledge"] + " " + df["question"],
             "Response": df["hallucinated_answer"],
-            "Ground_truth": 0,
+            "Ground_truth": False,
         }
     )
 
