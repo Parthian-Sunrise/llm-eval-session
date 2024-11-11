@@ -20,7 +20,7 @@ def get_openai_client():
 
     if settings.api_key == "":
         raise ValueError(
-            """Invalid OpenAI token. Please make sure you replace the placeholder
+            """Invalid OpenAI token. If you are running locally, please make sure you replace the placeholder
             with the actual api key in the .env file."""
         )
 
