@@ -1,5 +1,6 @@
 prompts = {
-    "1": """Your job is to evaluate a summariser chatbot. The chatbot takes articles and summarises their contents into shorter, punchier highlights.
+    "1": """\
+Your job is to evaluate a summariser chatbot. The chatbot takes articles and summarises their contents into shorter, punchier highlights.
 
 Here is a summary made by the chatbot:
 
@@ -24,6 +25,6 @@ Your job is to assess the brevity and conciseness of the summary using the follo
 
 RETURN YOUR SCORE IN THE FOLLOWING FORMAT:
 
-{'SCORE' : SCORE GOES HERE}
+{'SCORE' : SCORE GOES HERE}\
 """
 }

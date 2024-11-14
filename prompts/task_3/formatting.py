@@ -1,5 +1,6 @@
 prompts = {
-    "1": """Here's the text:
+    "1": """\
+Here's the text:
 {TEXT}
 
 I expect there to be THREE numerical types in this data:
@@ -14,5 +15,6 @@ EXAMPLE OUTPUT:
 
 {'currency_amounts' : ["£10.22"],
  'dates' : [18th Nov 2043, 01/02/02],
- 'numbers' : [1,300, 1.22]}"""
+ 'numbers' : [1,300, 1.22]}\
+"""
 }

@@ -1,5 +1,6 @@
 prompts = {
-    "1": """Your job is to evaluate a summariser chatbot. The chatbot takes articles and summarises their contents into shorter, punchier highlights.
+    "1": """\
+Your job is to evaluate a summariser chatbot. The chatbot takes articles and summarises their contents into shorter, punchier highlights.
     
 Here's the original article:
 {ARTICLE}
@@ -16,6 +17,6 @@ Your task is to specify how many of those facts are NOT mentioned directly or in
 
 Return the numbers of the key facts that were NOT covered in a list
 
-EXAMPLE OUTPUT: ["1", "9"]
+EXAMPLE OUTPUT: ["1", "9"]\
 """
 }
