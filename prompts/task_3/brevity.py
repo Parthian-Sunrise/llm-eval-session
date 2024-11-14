@@ -23,8 +23,6 @@ Your job is to assess the brevity and conciseness of the summary using the follo
 - The summary contains the minimum amount of information to relay the key events
 - THe summary is direct and to the point
 
-RETURN YOUR SCORE IN THE FOLLOWING FORMAT:
-
-{'SCORE' : SCORE GOES HERE}\
+RETURN YOUR SCORE (POOR, MEDIUM OR GOOD) AND NOTHING ELSE:
 """
 }

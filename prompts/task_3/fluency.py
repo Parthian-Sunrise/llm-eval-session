@@ -10,6 +10,6 @@ Your task is to list spelling mistake, grammatical error or punctuation error pr
 
 Return them in a list such as:
 
-["wakled", "he was went"]\
+["wakled", "he was went"]
 """
 }

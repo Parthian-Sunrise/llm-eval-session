@@ -7,6 +7,7 @@ Here's the original article:
 
 Write a list of the key facts in the text in order:
 
+Example Output (LIST OF FACTS):
 ["1. ....", "2. ....",...,"10: ...."]
 
 Here is a summary of the original text:
@@ -15,8 +16,14 @@ Here is a summary of the original text:
 
 Your task is to specify how many of those facts are NOT mentioned directly or indirectly by the summary.
 
-Return the numbers of the key facts that were NOT covered in a list
+Now write a list of the numbers of all the key facts that were not mentioned in the summary.
 
-EXAMPLE OUTPUT: ["1", "9"]\
+Example Output (LIST OF THE NUMBERS OF THE FACTS NOT COVERED):
+["1", "9"]
+
+Return the following:
+
+{'FACT_LIST' : LIST OF FACTS GOES HERE, 'NOT_COVERED' : LIST OF THE NUMBERS OF THE FACTS NOT COVERED}
+
 """
 }
