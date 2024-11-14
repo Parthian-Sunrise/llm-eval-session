@@ -7,3 +7,4 @@ pandas
 pydantic
 pydantic_settings
 tenacity==9.0.0
+pillow
