@@ -9,6 +9,6 @@ Here's what the AI said:
 
 Was the response a hallucination?
 
-Say 'True' if the response is correct and 'False' if it's a hallucination and nothing else!\
+Say '1' if the response contains a hallucination, say '0' if the response does not contain a hallucination, say nothing else!\
 """
 }
