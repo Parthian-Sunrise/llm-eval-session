@@ -1,0 +1,20 @@
+***FLUENCY***
+
+Top-level view: Fluency is a measure of the correct use of language according to standard English rules. Fluency errors could include grammatical errors (incorrect use of plurals, word order, missing articles such as 'the' or 'a' etc.) or the misspelling of words and misuse of punctuation.
+
+Direct metrics: LLM-as-a-judge or rule based checks (e.g. Microsoft Word)
+
+
+***BREVITY***
+
+Top-level view: Brevity is a measure of conveying a long-form story or account in the shortest words possible without compromising on the salient points of the original text. This often goes hand in hand with using direct and straightforward language rather than more complicated terms or words.
+
+Direct metric: LLM-as-a-judge
+
+Indirect metrics could be: average word length, word length, word entropy etc, ratio of words to number of words in the original text
+
+***COVERAGE***
+
+Top-level view: Coverage is a measure of the number of key, important or relevant facts that are given sufficient mention in a summary of a longer text. Some facts may not need to be referred to directly but could be implicitly referred to via other facts.
+
+Direct metric: LLM-as-a-judge
