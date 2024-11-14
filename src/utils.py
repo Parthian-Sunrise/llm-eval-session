@@ -31,17 +31,19 @@ def preprocess_hallucination(df, volume, seed=42):
 
     df_right_answer = pd.DataFrame(
         {
-            "Context": df["knowledge"] + " " + df["question"],
-            "Response": df["right_answer"],
-            "Ground_truth": True,
+            "relevant_knowledge": df["knowledge"],
+            "user_question": df["question"],
+            "chatbot_answer": df["right_answer"],
+            "is_hallucination_error_ground_truth": 0,
         }
     )
 
     df_hallucinate_answer = pd.DataFrame(
         {
-            "Context": df["knowledge"] + " " + df["question"],
-            "Response": df["hallucinated_answer"],
-            "Ground_truth": False,
+            "relevant_knowledge": df["knowledge"],
+            "user_question": df["question"],
+            "chatbot_answer": df["hallucinated_answer"],
+            "is_hallucination_error_ground_truth": 1,
         }
     )
 
